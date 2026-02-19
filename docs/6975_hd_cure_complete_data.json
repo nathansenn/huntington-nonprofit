@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "version": "4.0",
+    "author": "APEX SENN",
+    "date": "2026-02-19",
+    "monte_carlo_n": 100000
+  },
+  "connor_profile": {
+    "mother_estimated_cag": 60,
+    "connor_cag_median": 61.49070112494471,
+    "connor_cag_mean": 61.493803012211075,
+    "connor_cag_p5": 54.10286448099778,
+    "connor_cag_p95": 68.8957710663984,
+    "connor_cag_p25": 58.456383960735764,
+    "connor_cag_p75": 64.52632245188812,
+    "onset_median": 19.14867892860105,
+    "onset_mean": 19.74678970139291,
+    "onset_p5": 13.812659253334735,
+    "onset_p95": 27.7128678819096,
+    "onset_p10": 14.804092552245422,
+    "onset_p90": 25.427117424223383,
+    "window_median": 9.148678928601052,
+    "window_mean": 9.746789701392908,
+    "p_window_ge_5yr": 0.88785,
+    "p_window_ge_10yr": 0.4184,
+    "p_window_ge_15yr": 0.11294,
+    "p_window_ge_20yr": 0.02512,
+    "p_amt130_before_onset": 0.98637,
+    "p_msh3_before_onset": 0.8533,
+    "p_crispr_before_onset": 0.5286,
+    "p_any_therapy_before_onset": 0.9879,
+    "p_not_carrier": 0.5,
+    "p_favorable_outcome": 0.99395,
+    "n_simulations": 100000
+  },
+  "synergy_matrix": {
+    "Gene Silencing (HTT ": 0.895,
+    "Somatic Expansion Bl": 0.83,
+    "CRISPR Gene Editing": 0.95,
+    "Protein Clearance & ": 0.76,
+    "Neuroprotection & Ce": 0.64,
+    "Lifestyle Shield Pro": 0.33499999999999996,
+    "Gene Silen+Somatic Ex": 0.98215,
+    "Gene Silen+Lifestyle ": 0.930175,
+    "Somatic Ex+CRISPR Gen": 0.9914999999999999,
+    "Somatic Ex+Lifestyle ": 0.8869499999999999,
+    "Gene Silen+CRISPR Gen": 0.99475,
+    "V1+V2+V6": 0.98812975,
+    "V1+V2+V3": 0.9991075,
+    "ALL_6_VECTORS": 0.99994872052
+  },
+  "msh3_dose_response": {
+    "0pct": {
+      "msh3_reduction_pct": 0,
+      "msh3_level": 1.0,
+      "relative_expansion_rate": 1.0,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 15.855855855855856,
+      "onset_delay_years": 0.0,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "10pct": {
+      "msh3_reduction_pct": 10,
+      "msh3_level": 0.9,
+      "relative_expansion_rate": 0.9,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 17.53753753753754,
+      "onset_delay_years": 1.6816816816816829,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "20pct": {
+      "msh3_reduction_pct": 20,
+      "msh3_level": 0.8,
+      "relative_expansion_rate": 0.8,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 19.6996996996997,
+      "onset_delay_years": 3.8438438438438443,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "25pct": {
+      "msh3_reduction_pct": 25,
+      "msh3_level": 0.75,
+      "relative_expansion_rate": 0.75,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 20.98098098098098,
+      "onset_delay_years": 5.125125125125125,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "30pct": {
+      "msh3_reduction_pct": 30,
+      "msh3_level": 0.7,
+      "relative_expansion_rate": 0.7,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 22.42242242242242,
+      "onset_delay_years": 6.566566566566566,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "41pct": {
+      "msh3_reduction_pct": 41,
+      "msh3_level": 0.5900000000000001,
+      "relative_expansion_rate": 0.5900000000000001,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 26.426426426426428,
+      "onset_delay_years": 10.570570570570572,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "50pct": {
+      "msh3_reduction_pct": 50,
+      "msh3_level": 0.5,
+      "relative_expansion_rate": 0.5,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 30.99099099099099,
+      "onset_delay_years": 15.135135135135135,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "60pct": {
+      "msh3_reduction_pct": 60,
+      "msh3_level": 0.4,
+      "relative_expansion_rate": 0.4,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 38.27827827827828,
+      "onset_delay_years": 22.42242242242242,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "70pct": {
+      "msh3_reduction_pct": 70,
+      "msh3_level": 0.30000000000000004,
+      "relative_expansion_rate": 0.30000000000000004,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 50.21021021021021,
+      "onset_delay_years": 34.35435435435435,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "75pct": {
+      "msh3_reduction_pct": 75,
+      "msh3_level": 0.25,
+      "relative_expansion_rate": 0.25,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 59.4994994994995,
+      "onset_delay_years": 43.64364364364364,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "80pct": {
+      "msh3_reduction_pct": 80,
+      "msh3_level": 0.19999999999999996,
+      "relative_expansion_rate": 0.19999999999999996,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": 73.03303303303304,
+      "onset_delay_years": 57.17717717717718,
+      "disease_prevented": false,
+      "untreated_onset": 20.296722417727423
+    },
+    "83pct": {
+      "msh3_reduction_pct": 83,
+      "msh3_level": 0.17000000000000004,
+      "relative_expansion_rate": 0.17000000000000004,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": null,
+      "onset_delay_years": null,
+      "disease_prevented": true,
+      "untreated_onset": 20.296722417727423
+    },
+    "90pct": {
+      "msh3_reduction_pct": 90,
+      "msh3_level": 0.09999999999999998,
+      "relative_expansion_rate": 0.09999999999999998,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": null,
+      "onset_delay_years": null,
+      "disease_prevented": true,
+      "untreated_onset": 20.296722417727423
+    },
+    "95pct": {
+      "msh3_reduction_pct": 95,
+      "msh3_level": 0.050000000000000044,
+      "relative_expansion_rate": 0.050000000000000044,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": null,
+      "onset_delay_years": null,
+      "disease_prevented": true,
+      "untreated_onset": 20.296722417727423
+    },
+    "100pct": {
+      "msh3_reduction_pct": 100,
+      "msh3_level": 0.0,
+      "relative_expansion_rate": 0.0,
+      "untreated_threshold_age": 15.855855855855856,
+      "treated_threshold_age": null,
+      "onset_delay_years": null,
+      "disease_prevented": true,
+      "untreated_onset": 20.296722417727423
+    }
+  },
+  "langbehn_calibration": {
+    "36": 92,
+    "37": 84,
+    "38": 76,
+    "39": 68,
+    "40": 61.0,
+    "41": 57.078933665718424,
+    "42": 53.45933323727678,
+    "43": 50.11802091439422,
+    "44": 47.03360089075824,
+    "45": 44.18632234781761,
+    "46": 41.55795298211318,
+    "47": 39.13166225628956,
+    "48": 36.891913626195475,
+    "49": 34.82436505395856,
+    "50": 32.9157771699783,
+    "51": 31.15392849576065,
+    "52": 29.52753718473071,
+    "53": 28.026188779897787,
+    "54": 26.64026952577501,
+    "55": 25.360904807522306,
+    "56": 24.1799023231129,
+    "57": 23.08969962463135,
+    "58": 22.08331569278821,
+    "59": 21.154306234562952,
+    "60": 20.296722417727423,
+    "61": 19.50507277800991,
+    "62": 18.774288054975578,
+    "63": 18.099688731452954,
+    "64": 17.476955068647857,
+    "65": 16.902099445067247,
+    "66": 16.371440822127703,
+    "67": 15.881581172941189,
+    "68": 15.429383723341893,
+    "69": 15.011952865822439,
+    "70": 14.626615617760038,
+    "71": 14.270904505201994,
+    "72": 13.942541762608286,
+    "73": 13.639424747375688,
+    "74": 13.35961247574655,
+    "75": 13.101313193886115,
+    "76": 12.86287290454082,
+    "77": 12.642764775809017,
+    "78": 12.439579364204118,
+    "79": 12.252015589404337,
+    "80": 12.078872402896677
+  },
+  "expansion_threshold_ages": {
+    "40": 24.584584584584583,
+    "42": 23.463463463463462,
+    "45": 21.94194194194194,
+    "50": 19.61961961961962,
+    "55": 17.61761761761762,
+    "60": 15.855855855855856,
+    "65": 14.254254254254255,
+    "70": 12.812812812812812
+  },
+  "neuronal_survival": {
+    "Untreated": {
+      "survival_at_40": 4.5122663187476866e-52,
+      "survival_at_60": 0.0,
+      "survival_at_80": 0.0
+    },
+    "V6 Lifestyle": {
+      "survival_at_40": 2.8405189959031345e-08,
+      "survival_at_60": 0.0,
+      "survival_at_80": 0.0
+    },
+    "V1 AMT-130": {
+      "survival_at_40": 0.023070498985405915,
+      "survival_at_60": 0.0,
+      "survival_at_80": 0.0
+    },
+    "V2 MSH3 41%": {
+      "survival_at_40": 0.6762966364620966,
+      "survival_at_60": 1.0480858391878046e-19,
+      "survival_at_80": 0.0
+    },
+    "V2 MSH3 83%": {
+      "survival_at_40": 1.0,
+      "survival_at_60": 1.0,
+      "survival_at_80": 1.0
+    },
+    "V1+V2+V6": {
+      "survival_at_40": 1.0,
+      "survival_at_60": 1.0,
+      "survival_at_80": 1.0
+    }
+  },
+  "vectors": {
+    "V1_gene_silencing": {
+      "name": "Gene Silencing (HTT RNA)",
+      "therapy": "AMT-130 (uniQure)",
+      "target": "RNA",
+      "biological_level": 2,
+      "efficacy": 0.895,
+      "mechanism": "AAV5-miRNA silences HTT mRNA, reducing toxic protein production",
+      "evidence": "75% cUHDRS slowing (p=0.003), 92% mHTT reduction in striatum",
+      "timeline": "2027-2029 (EU/UK path; US path uncertain after Nov 2025 FDA shift)",
+      "status": "Phase I/II complete, BLA pathway being resolved",
+      "confidence": 0.85
+    },
+    "V2_expansion_block": {
+      "name": "Somatic Expansion Block (MSH3)",
+      "therapy": "MSH3 ASO / LoQus23 / di-siRNA",
+      "target": "DNA",
+      "biological_level": 1,
+      "efficacy": 0.83,
+      "mechanism": "Suppress MSH3 to halt somatic CAG repeat expansion in neurons",
+      "evidence": "83% MSH3 reduction halts expansion completely (Bunting 2025)",
+      "timeline": "LoQus23 oral: clinic 2026. ASO: Phase I 2027-28",
+      "status": "Preclinical proven, entering clinic",
+      "confidence": 0.8
+    },
+    "V3_crispr": {
+      "name": "CRISPR Gene Editing",
+      "therapy": "LETI-101 / Base editing / Cas13d",
+      "target": "DNA",
+      "biological_level": 1,
+      "efficacy": 0.95,
+      "mechanism": "Allele-selective editing/silencing of mutant HTT",
+      "evidence": "Broad CNS biodistribution, allele-selective mHTT reduction (CHDI 2025)",
+      "timeline": "LETI-101: MHRA aligned, IND 2027. First-in-human 2028-30",
+      "status": "Late preclinical, regulatory alignment",
+      "confidence": 0.7
+    },
+    "V4_protein_clearance": {
+      "name": "Protein Clearance & Synapse Protection",
+      "therapy": "PROTAC / ANX005 (Annexon) / Intrabodies",
+      "target": "PROTEIN",
+      "biological_level": 3,
+      "efficacy": 0.76,
+      "mechanism": "Degrade mHTT aggregates + block complement-mediated synapse loss",
+      "evidence": "ANX005 C1q blockade preserves synapses; PROTAC selective degradation",
+      "timeline": "ANX005: Phase II 2026-27. PROTAC: optimization ongoing",
+      "status": "Early clinical / late preclinical",
+      "confidence": 0.65
+    },
+    "V5_neuroprotection": {
+      "name": "Neuroprotection & Cell Replacement",
+      "therapy": "HX127 / iPSC-MSN / BDNF / Methylphenidate",
+      "target": "CELL",
+      "biological_level": 4,
+      "efficacy": 0.64,
+      "mechanism": "Restore BDNF transport, protect neurons, replace lost MSNs",
+      "evidence": "HX127 oral BDNF restorer; CINNAMON: cognition improved",
+      "timeline": "HX127: human trials 2026. iPSC-MSN transplant: 2030+",
+      "status": "Entering trials",
+      "confidence": 0.55
+    },
+    "V6_lifestyle": {
+      "name": "Lifestyle Shield Protocol",
+      "therapy": "Exercise + Mediterranean Diet + Cognitive + Stress",
+      "target": "SYSTEM",
+      "biological_level": 5,
+      "efficacy": 0.335,
+      "mechanism": "Multimodal neuroprotection via exercise, diet, cognitive reserve",
+      "evidence": "13% caudate atrophy reduction (PACE-HD); up to 20yr delay (Lange)",
+      "timeline": "ACTIVE NOW",
+      "status": "Deployed",
+      "confidence": 0.9
+    }
+  }
+}
