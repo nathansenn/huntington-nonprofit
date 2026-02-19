@@ -8,7 +8,7 @@ export default function KnowledgePedestals({ items }) {
 	      <div className="pedestal-grid">
 	        {items.map((item) => (
 	          <article key={item.title} className="pedestal">
-	            <div className={`light-bar ${item.status.toLowerCase().replace(/\\s+/g, '-')}`} />
+	            <div className={`light-bar ${item.status.toLowerCase().replace(/\s+/g, '-')}`} />
 	            <h4>{item.title}</h4>
             <p>{item.description}</p>
             <span>{item.status}</span>
