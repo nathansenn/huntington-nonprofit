@@ -25,8 +25,8 @@ export default async function AboutStoryPage() {
   return (
     <div className="page">
       <PortalHeader />
-      <main className="container">
-        <section className="section panel">
+      <main className="container lab-main">
+        <section className="section panel lab-stream">
           <p className="crumb">Family story</p>
           <h1>Connor Story + Family Risk Profile</h1>
           <p className="lead">
@@ -35,8 +35,8 @@ export default async function AboutStoryPage() {
           </p>
         </section>
 
-        <section className="section split-visuals">
-          <article className="panel">
+        <section className="section split-visuals lab-split">
+          <article className="panel lab-pod">
             <h2>Risk Profile</h2>
             <p>
               Bayesian risk profile with transmission assumptions, onset modeling, and therapeutic
@@ -53,7 +53,7 @@ export default async function AboutStoryPage() {
             </div>
           </article>
 
-          <article className="panel">
+          <article className="panel lab-pod">
             <h2>Timeline</h2>
             <p>
               Intervention planning from age 10 through autonomy milestones and therapy access
@@ -68,7 +68,7 @@ export default async function AboutStoryPage() {
           </article>
         </section>
 
-        <section className="section panel">
+        <section className="section panel lab-pod">
           <h2>Protocol Plan (Full)</h2>
           <p className="lead">
             Connor-specific intervention phases are kept as the same timeline used in the source system

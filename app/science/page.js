@@ -25,8 +25,8 @@ export default async function SciencePage() {
   return (
     <div className="page">
       <PortalHeader />
-      <main className="container">
-        <section className="section panel">
+      <main className="container lab-main">
+        <section className="section panel lab-stream">
           <p className="crumb">Science hub</p>
           <h1>Science and Evidence</h1>
           <p className="lead">
@@ -36,7 +36,7 @@ export default async function SciencePage() {
         </section>
 
         <section className="section grid section-stacked">
-          <article className="panel">
+          <article className="panel lab-pod">
             <h2>Pathogenesis Cascade</h2>
             <p>
               The disease progression model maps six levels of mechanism. The full cascade figure is
@@ -53,7 +53,7 @@ export default async function SciencePage() {
             </div>
           </article>
 
-          <article className="panel">
+          <article className="panel lab-pod">
             <h2>Mathematical Proof</h2>
             <p>
               The formal proof package includes deductive logic, causal chain analysis, and verified
@@ -71,7 +71,7 @@ export default async function SciencePage() {
           </article>
         </section>
 
-        <section className="section panel">
+        <section className="section panel lab-pod">
           <h2>Multi-Vector Synergy Model Snapshot</h2>
           <p className="lead">
             This section tracks the 6-vector combination framework and the reported 99.97% blocked

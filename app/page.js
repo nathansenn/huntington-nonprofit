@@ -87,38 +87,52 @@ export default function Home() {
     <div className="page">
       <PortalHeader />
 
-      <main className="container">
-        <section className="hero panel">
-          <span className="chip">Non-profit + R&D mission</span>
+      <main className="container lab-main">
+        <section className="section panel lab-hero">
+          <div className="lab-hero-grid">
+            <div className="hero-copy">
+              <span className="lab-badge">SENN Family Science Lab</span>
+              <span className="chip">Non-profit + R&D mission</span>
+              <h2>
+                Fighting Huntington’s through direct family support and transparent, reproducible research.
+              </h2>
+              <p>
+                We combine compassionate care with engineering discipline. Every initiative must move both support
+                and science forward with measurable output, open evidence, and family-first outcomes.
+              </p>
+              <div className="cta">
+                <a href="#support">Support a Family</a>
+                <a href="#research">Explore R&D</a>
+                <a href="/science">Science Hub</a>
+                <a href="/rd">R&amp;D Archive</a>
+                <a href="/projects">Project Map</a>
+                <a href="/about">Connor Story</a>
+              </div>
+            </div>
+            <div className="lab-canvas-shell">
+              <CureHelixCanvas />
+            </div>
+          </div>
           <div className="proof">
             <div className="proof-copy">
               <h4>Proof of Hope</h4>
               <p>
-                6 therapeutic vectors are modeled and tracked as active blockers in
-                the HD CURE pathway. Visual output is being upgraded to an interactive
-                pathogenesis-first display designed for investor and family trust.
+                Six therapeutic vectors are modeled as active blockers in the HD pathway.
+                Visual pathways are mapped in a live lab workflow designed for investor, family,
+                and patient trust.
               </p>
             </div>
-            <CureHelixCanvas />
-          </div>
-          <h2>
-            Fighting Huntington’s through direct family support and rigorous, transparent research development.
-          </h2>
-          <p>
-            We combine non-profit care work with in-house development. Every initiative
-            must move both support and science forward. This includes computational biology
-            modeling, AI product development, and learning architecture for safer innovation.
-          </p>
-          <div className="cta">
-            <a href="#support">Support a Family</a>
-            <a href="#research">Explore R&D</a>
-            <a href="/science">Science Hub</a>
-            <a href="/rd">R&amp;D Archive</a>
-            <a href="/about">Connor Story</a>
+            <div className="proof-cascade">
+              {proof.map((entry) => (
+                <div key={entry} className="light-badge">
+                  {entry}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="grid section">
+        <section className="grid section lab-metrics">
           {metrics.map((metric) => (
             <article key={metric.label} className="metric panel">
               <strong>{metric.value}</strong>
@@ -127,7 +141,7 @@ export default function Home() {
           ))}
         </section>
 
-        <section id="research" className="section">
+        <section id="research" className="section panel lab-stream">
           <h2>R&D Portfolio (Active and Ongoing)</h2>
           <p className="lead">
             We include every core project in this portal: biomedical, AI, and memory systems.
@@ -135,7 +149,9 @@ export default function Home() {
           <div className="research-grid">
             {researchLines.map((project) => (
               <article key={project.title} className="panel card">
-                <div className="status">{project.status}</div>
+                <div className={`status ${project.status.toLowerCase().replace(/\s+/g, "-")}`}>
+                  {project.status}
+                </div>
                 <h3>{project.title}</h3>
                 <p>{project.summary}</p>
                 <ul>
@@ -148,7 +164,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="ordered-light" className="section">
+        <section id="ordered-light" className="section panel">
           <h2>Ordered Light Frontend</h2>
           <p className="lead">
             Ordered Light development tracks are now mapped to the homepage for real navigation and direct visibility.
@@ -160,7 +176,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section split">
+        <section className="section split lab-split">
           <article className="panel">
             <h2>How donations are used</h2>
             <ul>
@@ -185,3 +201,12 @@ export default function Home() {
     </div>
   );
 }
+
+const proof = [
+  "Molecular modeling in production",
+  "Real-time pathway scoring",
+  "Open artifact hash trail",
+  "Direct family impact channels",
+  "No-profit workflow + traceability",
+  "7/24 family-first response",
+];
