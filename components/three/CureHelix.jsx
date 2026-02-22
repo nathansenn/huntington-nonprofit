@@ -3,6 +3,7 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Environment } from '@react-three/drei';
+import * as THREE from 'three';
 
 const VECTORS = [
   { id: 'V1', name: 'Gene Silencing', color: '#58A6FF', pos: [2.5, 2, 0] },
