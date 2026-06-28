@@ -1,17 +1,19 @@
 import Link from "next/link";
+import { pageMeta } from "../lib/seo";
 
-export const metadata = {
-  title: "Get Involved — help families facing Huntington's disease",
+export const metadata = pageMeta({
+  title: "Get Involved — Help Families Facing Huntington's Disease",
   description:
-    "Ways to support HD families and research: give to trusted HD nonprofits, join research, volunteer, and share honest information.",
-};
+    "Ways to support HD families and open research: fund AI-powered open science, join Enroll-HD, share honest information, and support families near you.",
+  path: "/get-involved",
+});
 
 const ways = [
   {
     icon: "💛",
-    title: "Give to HD research & support",
-    body: "Until our own giving channel is live, the most effective thing you can do today is support established HD nonprofits. Gifts to HDSA fund family services and research; gifts to CHDI Foundation fund therapy development directly.",
-    cta: { label: "Donate via HDSA", href: "https://hdsa.org/" },
+    title: "Fund open HD research",
+    body: "Our own giving channel isn't live yet (we're still setting up accounts and nonprofit status). When it is, donations will fund AI research models that study HD and publish the findings openly for everyone — see exactly how that works and what each gift supports. Until then, gifts to established nonprofits like HDSA help families today.",
+    cta: { label: "See our open-research model", href: "/research" },
   },
   {
     icon: "🧪",

@@ -20,7 +20,16 @@ export const therapeuticPrograms = [
     status: "trial",
     statusLabel: "Phase 3 enrolling",
     detail:
-      "An oral huntingtin-lowering drug. In a 24-month interim look at an open-label extension, the higher (10 mg) dose showed roughly 52% slowing on the cUHDRS scale in Stage 2 patients versus a matched natural-history comparison — the lower dose showed about 28%. These are early interim signals, reported without formal statistical testing and compared to natural history rather than a placebo group. A large Phase 3 trial (INVEST-HD), now run by Novartis, is enrolling; that randomized study is what would confirm the effect.",
+      "An oral huntingtin-lowering drug. In a 24-month interim look at an open-label extension (April 2026), the higher (10 mg) dose showed roughly 52% slowing on the cUHDRS scale in Stage 2 patients versus a matched natural-history comparison — the lower dose showed about 28%. These are early interim signals, reported without formal statistical testing and compared to natural history rather than a placebo group. The pivotal Phase 3 trial (INVEST-HD, ~770 patients), now run by Novartis, is enrolling, with a readout expected around 2030.",
+  },
+  {
+    name: "SKY-0515",
+    sponsor: "Skyhawk Therapeutics",
+    approach: "Oral pill that lowers BOTH huntingtin and PMS1 (a repair gene that drives repeat growth).",
+    status: "trial",
+    statusLabel: "Phase 1/2 — interim data",
+    detail:
+      "One of the most advanced newer entrants, and the first to combine two strategies in a single oral drug: lowering the huntingtin protein and reducing PMS1, a DNA-repair gene that helps drive the somatic expansion of the CAG repeat. A 12-month interim readout (June 2026) reported sustained mutant-huntingtin lowering of up to ~69%, with the Phase 2/3 portion (FALCON-HD, 144 participants) fully enrolled ahead of schedule. It has FDA Fast Track designation. Promising early signals — efficacy on the disease itself is not yet established.",
   },
   {
     name: "WVE-003",
@@ -29,7 +38,25 @@ export const therapeuticPrograms = [
     status: "trial",
     statusLabel: "Early clinical",
     detail:
-      "Designed to silence only the disease-causing copy of the gene — for the roughly 40% of patients who carry the specific genetic marker it targets. In a small early trial it lowered mutant huntingtin by about 46% while preserving the healthy protein, and was generally well tolerated. The degree of lowering correlated with slower shrinkage of a key brain region, but the study was not built to prove that effect. A larger study is planned, pending a development partner.",
+      "Designed to silence only the disease-causing copy of the gene — for the roughly 40% of patients who carry the specific genetic marker it targets. In a small early trial it lowered mutant huntingtin by about 46% while preserving the healthy protein, and was generally well tolerated. The degree of lowering correlated with slower shrinkage of a key brain region, but the study was not built to prove that effect. Wave is now advancing it independently and preparing a larger, potentially registrational trial.",
+  },
+  {
+    name: "ION993 (RG6496)",
+    sponsor: "Roche / Ionis",
+    approach: "Next-generation allele-selective ASO that targets only the mutant huntingtin.",
+    status: "trial",
+    statusLabel: "Phase 1 recruiting",
+    detail:
+      "A successor to tominersen designed to silence only the mutant copy of the gene (by targeting a marker carried with the expanded allele), aiming to spare the healthy protein and improve safety. Its first-in-human Phase 1 study (POINT-HD) began recruiting in late 2025. Very early — there are no efficacy results yet.",
+  },
+  {
+    name: "hNSC-01 (stem-cell therapy)",
+    sponsor: "UC Irvine / CIRM",
+    approach: "Neural stem cells implanted into the striatum to protect and potentially replace neurons.",
+    status: "trial",
+    statusLabel: "Phase 1b/2a — first patients dosed",
+    detail:
+      "A different approach entirely: rather than lowering a protein, this therapy surgically delivers lab-grown neural stem cells into the brain region most affected by HD, hoping to protect surviving neurons and release supportive signals. It is the first in-human stem-cell therapy for HD; the first participant was dosed in May 2026 in a small early-stage safety trial. Years from knowing whether it helps, but an important new direction.",
   },
   {
     name: "MSH3 inhibitors (e.g. LQT-23)",
@@ -47,7 +74,7 @@ export const therapeuticPrograms = [
     status: "trial",
     statusLabel: "Phase 2 ongoing",
     detail:
-      "An earlier Phase 3 trial was halted in 2021 after an interim review found no benefit, but a redesigned Phase 2 study (GENERATION HD2) in earlier-stage patients is ongoing; in 2025 it was streamlined to its higher dose, with results expected around 2026. It is a key test of whether dose and timing make the difference.",
+      "An earlier Phase 3 trial was halted in 2021 after an interim review found no benefit, but a redesigned Phase 2 study (GENERATION HD2) in earlier-stage patients is ongoing; in 2025 it was streamlined to its higher dose. As of mid-2026 it is still blinded with no results yet — a key test of whether dose and timing make the difference.",
   },
   {
     name: "Symptomatic medicines",
@@ -138,6 +165,26 @@ export const sources = [
   {
     text: "Quinn et al. Physical therapy clinical practice guideline for HD (Grade A for exercise). Neurology, 2020.",
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7080285/",
+  },
+  {
+    text: "Skyhawk Therapeutics. SKY-0515 12-month Phase 1/2 interim results (HTT + PMS1 lowering), June 2026.",
+    url: "https://huntington-disease.org/2026/06/02/skyhawk-therapeutics-announces-twelve-month-interim-results-from-phase-1-2-clinical-trial-of-sky-0515-in-huntingtons-disease/",
+  },
+  {
+    text: "ION993 / RG6496 (Roche/Ionis) allele-selective HTT ASO — Phase 1 POINT-HD, ClinicalTrials.gov NCT07246941.",
+    url: "https://clinicaltrials.gov/study/NCT07246941",
+  },
+  {
+    text: "UC Irvine Health. First patient dosed in hNSC-01 neural stem-cell therapy trial for HD, June 2026.",
+    url: "https://news.uci.edu/2026/06/23/first-patient-receives-neural-stem-cell-therapy-in-groundbreaking-uci-health-huntingtons-disease-clinical-trial/",
+  },
+  {
+    text: "Somatic CAG expansion measured in blood as a predictive biomarker, decades before onset. Nature Medicine, Jan 2025.",
+    url: "https://www.nature.com/articles/s41591-024-03424-6",
+  },
+  {
+    text: "Pridopidine PROOF-HD Phase 3 missed its endpoints. Nature Medicine, Sept 2025.",
+    url: "https://www.nature.com/articles/s41591-025-03920-3",
   },
 ];
 

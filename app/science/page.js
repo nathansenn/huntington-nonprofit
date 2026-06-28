@@ -1,11 +1,42 @@
 import Link from "next/link";
 import { therapeuticPrograms, sources, statusTagClass } from "../lib/content";
+import JsonLd from "../components/JsonLd";
+import { pageMeta, medicalWebPageLd, faqLd, breadcrumbLd } from "../lib/seo";
 
-export const metadata = {
-  title: "The Science — Huntington's disease, explained honestly",
+export const metadata = pageMeta({
+  title: "The Science of Huntington's Disease, Explained Honestly",
   description:
-    "A plain-language, sourced guide to Huntington's disease: what it is, the somatic-expansion discovery that reshaped the field, and the therapies now in clinical trials. No false promises.",
-};
+    "A plain-language, sourced guide to Huntington's disease: the genetics, the somatic-expansion discovery, and the therapies now in clinical trials. No false promises.",
+  path: "/science",
+  keywords: [
+    "Huntington's disease",
+    "CAG repeat",
+    "HTT gene",
+    "somatic expansion",
+    "AMT-130",
+    "huntingtin lowering",
+    "MSH3",
+  ],
+});
+
+const faqs = [
+  {
+    q: "Is Huntington's disease hereditary?",
+    a: "Yes. HD is autosomal dominant, so each child of a parent with HD has a 50% chance of inheriting the expanded HTT gene that causes it.",
+  },
+  {
+    q: "Is there a cure for Huntington's disease?",
+    a: "No. As of mid-2026 there is no cure and no approved therapy that slows HD. Approved medicines treat symptoms such as chorea. Several disease-modifying therapies are in clinical trials but none is approved.",
+  },
+  {
+    q: "What is the CAG repeat in Huntington's disease?",
+    a: "HD is caused by an over-long run of a three-letter DNA sequence (CAG) in the HTT gene on chromosome 4. Counts of 40 or more cause HD, and longer repeats tend to mean earlier onset.",
+  },
+  {
+    q: "What does a 50% risk of Huntington's disease mean?",
+    a: "It means a coin flip that has not been decided: half of the children of an affected parent inherit the gene and half do not. Predictive testing is a personal choice usually made as an informed adult with genetic counseling.",
+  },
+];
 
 const repeatRanges = [
   { range: "26 or fewer", label: "Typical", note: "Not associated with HD." },
@@ -36,6 +67,21 @@ const mechanism = [
 export default function SciencePage() {
   return (
     <>
+      <JsonLd
+        data={[
+          medicalWebPageLd({
+            name: "The Science of Huntington's Disease, Explained Honestly",
+            description:
+              "Plain-language, sourced overview of HD genetics, somatic expansion, and the therapy pipeline.",
+            path: "/science",
+          }),
+          faqLd(faqs),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "The Science", path: "/science" },
+          ]),
+        ]}
+      />
       <section className="section section-tight" style={{ background: "var(--paper-soft)" }}>
         <div className="container">
           <p className="eyebrow">The science</p>
@@ -173,6 +219,94 @@ export default function SciencePage() {
             </a>{" "}
             and current trials.
           </p>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: "var(--paper-soft)" }}>
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">What&rsquo;s new in 2026</p>
+            <h2>The expansion frontier &mdash; and tests that see HD coming</h2>
+            <p className="lead">
+              Two fast-moving areas are reshaping the field: drugs that target the repeat&rsquo;s
+              ongoing growth, and biomarkers that can detect the disease process years before
+              symptoms.
+            </p>
+          </div>
+          <div className="grid grid-2" style={{ alignItems: "start", gap: "40px" }}>
+            <div className="prose">
+              <h3 className="mt-0">Slowing the repeat itself</h3>
+              <p>
+                Because HD is driven by the CAG repeat growing inside neurons, several programs now
+                aim squarely at that engine. <strong>SKY-0515</strong> (Skyhawk) is an oral drug that
+                lowers both huntingtin and PMS1, a repair gene that fuels expansion, and reported up
+                to ~69% huntingtin lowering in a 2026 interim readout. Others aim to reduce{" "}
+                <strong>MSH3</strong> or boost the protective gene <strong>FAN1</strong>. In the lab,
+                a base-editing approach even inserts tiny &ldquo;interruptions&rdquo; into the repeat to
+                stop it snowballing &mdash; still preclinical, but striking.
+              </p>
+            </div>
+            <div className="prose">
+              <h3 className="mt-0">Seeing HD before symptoms</h3>
+              <p>
+                A 2025 study showed that the repeat&rsquo;s growth can be measured in a{" "}
+                <strong>blood test</strong>, and that its rise predicts brain changes decades before
+                motor symptoms. Alongside it, <strong>neurofilament light (NfL)</strong> &mdash; a
+                marker of nerve-cell stress &mdash; rises years before diagnosis, and the new{" "}
+                <strong>HD-ISS staging system</strong> lets researchers enroll people at the earliest
+                biological stage, when treatment may work best. These tools are mostly for research
+                today, not routine care.
+              </p>
+            </div>
+          </div>
+          <div className="callout note" style={{ marginTop: "26px" }}>
+            <span className="callout-icon" aria-hidden="true">📉</span>
+            <p>
+              <strong>We report the setbacks too.</strong> Not everything works: in 2025 the Phase 3
+              trial of <strong>pridopidine</strong> (PROOF-HD) missed its goals, and European
+              regulators declined the application. Honest science means sharing the disappointments
+              as clearly as the breakthroughs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">For families like ours</p>
+            <h2>Juvenile HD &amp; planning a family</h2>
+          </div>
+          <div className="grid grid-2" style={{ alignItems: "start", gap: "40px" }}>
+            <article className="card">
+              <h3 style={{ marginTop: 0 }}>When HD starts in childhood</h3>
+              <p>
+                Juvenile HD (symptoms before age 20) is rare and looks different from the adult form:
+                the first signs are usually not chorea but changes in speech, stiffness or slowness,
+                trouble at school, and sometimes seizures. It is linked to very long CAG repeats and is
+                almost always inherited from an affected father. There is not yet a validated
+                HD rating scale built specifically for children &mdash; an important gap researchers
+                are working on.
+              </p>
+              <p className="mb-0 muted" style={{ fontSize: "0.92rem" }}>
+                Healthy children are not tested for adult-onset HD; testing is only used to diagnose a
+                child who is already showing symptoms.
+              </p>
+            </article>
+            <article className="card">
+              <h3 style={{ marginTop: 0 }}>Having children, with options</h3>
+              <p>
+                Families who carry HD have real choices. <strong>Preimplantation genetic testing
+                (PGT-M)</strong> pairs IVF with testing embryos for the family&rsquo;s HTT expansion,
+                so an unaffected embryo can be selected &mdash; with very high accuracy once the
+                mutation is characterized. <strong>Exclusion and non-disclosure testing</strong> let a
+                parent who doesn&rsquo;t want to know their own status still avoid passing HD on.
+              </p>
+              <p className="mb-0 muted" style={{ fontSize: "0.92rem" }}>
+                A certified genetic counselor is the right guide for these deeply personal decisions.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
