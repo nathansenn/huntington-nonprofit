@@ -2,9 +2,18 @@ import Link from "next/link";
 import DnaArt from "./components/DnaArt";
 
 export const metadata = {
-  title: "Huntington Family Hope Foundation — support & honest science for HD families",
+  title: { absolute: "Huntington Family Hope Foundation — Honest HD Science & Support" },
   description:
-    "Started in memory of Crissy and in hope for her son Connor. We help families facing Huntington's disease with compassion, community, and trustworthy science.",
+    "Started in memory of Crissy and in hope for her son Connor. We help families facing Huntington's disease with compassion, community, and trustworthy, up-to-date science.",
+  alternates: { canonical: "/" },
+  keywords: [
+    "Huntington's disease",
+    "HD nonprofit",
+    "Huntington's support",
+    "huntingtin",
+    "HD research",
+    "juvenile Huntington's",
+  ],
 };
 
 const facts = [
@@ -135,6 +144,9 @@ export default function Home() {
                 </li>
                 <li>
                   <strong>The science</strong> — an honest, sourced guide to HD and the therapies in development.
+                </li>
+                <li>
+                  <strong>Research &amp; findings</strong> — open, AI-assisted, human-reviewed summaries, free for everyone.
                 </li>
                 <li>
                   <strong>Resources</strong> — vetted organizations that help HD families today.

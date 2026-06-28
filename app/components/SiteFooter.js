@@ -30,8 +30,10 @@ export default function SiteFooter() {
             <h4>Explore</h4>
             <Link href="/story">Our Story</Link>
             <Link href="/science">The Science</Link>
+            <Link href="/research">Research &amp; Findings</Link>
             <Link href="/resources">Resources</Link>
             <Link href="/get-involved">Get Involved</Link>
+            <Link href="/about">About &amp; Editorial Policy</Link>
           </div>
           <div>
             <h4>If you need support now</h4>

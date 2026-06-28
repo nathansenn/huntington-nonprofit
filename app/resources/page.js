@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { resources } from "../lib/content";
+import { pageMeta } from "../lib/seo";
 
-export const metadata = {
-  title: "Resources — trusted help for HD families",
+export const metadata = pageMeta({
+  title: "Resources — Trusted Help for HD Families",
   description:
-    "Vetted organizations, support lines, and youth resources for families affected by Huntington's disease.",
-};
+    "Vetted organizations, support lines, and youth resources for families affected by Huntington's disease — HDSA, HDYO, Enroll-HD, and more.",
+  path: "/resources",
+});
 
 export default function ResourcesPage() {
   return (

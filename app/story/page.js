@@ -1,12 +1,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
+import JsonLd from "../components/JsonLd";
+import { pageMeta, breadcrumbLd } from "../lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Our Story — Connor & Crissy",
   description:
     "In memory of Crissy, who lived with Huntington's disease, and in hope for her son Connor. The story behind the Huntington Family Hope Foundation.",
-};
+  path: "/story",
+});
 
 // --- Photo memorial -------------------------------------------------------
 // Drop the photo files into /public/assets/family using the base names below
@@ -79,6 +82,12 @@ export default function StoryPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Our Story", path: "/story" },
+        ])}
+      />
       <section className="section section-tight" style={{ background: "var(--paper-soft)" }}>
         <div className="container">
           <p className="eyebrow">Our story</p>
