@@ -33,6 +33,7 @@ export default function SiteFooter() {
             <Link href="/research">Research &amp; Findings</Link>
             <Link href="/resources">Resources</Link>
             <Link href="/get-involved">Get Involved</Link>
+            <Link href="/about">About &amp; Editorial Policy</Link>
           </div>
           <div>
             <h4>If you need support now</h4>

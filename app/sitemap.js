@@ -7,6 +7,7 @@ const routes = [
   { path: "/research", priority: 0.8, changeFrequency: "weekly" },
   { path: "/resources", priority: 0.7, changeFrequency: "monthly" },
   { path: "/get-involved", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/about", priority: 0.5, changeFrequency: "monthly" },
 ];
 
 export default function sitemap() {
