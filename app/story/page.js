@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import Link from "next/link";
 
 export const metadata = {
@@ -6,7 +8,75 @@ export const metadata = {
     "In memory of Crissy, who lived with Huntington's disease, and in hope for her son Connor. The story behind the Huntington Family Hope Foundation.",
 };
 
+// --- Photo memorial -------------------------------------------------------
+// Drop the photo files into /public/assets/family using the base names below
+// (any of .jpg/.jpeg/.png/.webp). Each appears automatically once present;
+// until then a gentle placeholder with its caption is shown.
+const FAMILY_DIR = path.join(process.cwd(), "public", "assets", "family");
+const PHOTO_EXTS = [".jpg", ".jpeg", ".png", ".webp"];
+
+function findPhoto(baseName) {
+  for (const ext of PHOTO_EXTS) {
+    const rel = `/assets/family/${baseName}${ext}`;
+    try {
+      if (fs.existsSync(path.join(FAMILY_DIR, `${baseName}${ext}`))) return rel;
+    } catch {
+      // ignore — directory may not exist yet
+    }
+  }
+  return null;
+}
+
+const portrait = {
+  base: "crissy-before",
+  caption: "Crissy, before Connor.",
+  alt: "Crissy, a young woman with bright red hair and a warm smile.",
+};
+
+const arc = [
+  {
+    base: "crissy-connor-birth",
+    caption: "The day Connor was born.",
+    alt: "Crissy holding her newborn son Connor in the hospital.",
+  },
+  {
+    base: "crissy-connor-baby",
+    caption: "A week or so later, home together.",
+    alt: "Crissy cradling baby Connor at home.",
+  },
+  {
+    base: "crissy-connor-2021-a",
+    caption: "Crissy and Connor, 2021.",
+    alt: "Crissy and a six-year-old Connor sitting together.",
+  },
+  {
+    base: "crissy-connor-2021-b",
+    caption: "Mother and son.",
+    alt: "Crissy and Connor close together, smiling.",
+  },
+];
+
+function PhotoFrame({ src, caption, alt }) {
+  return (
+    <figure className="photo-frame">
+      <div className="frame-inner">
+        {src ? (
+          <img src={src} alt={alt} loading="lazy" />
+        ) : (
+          <div className="ph">
+            <span>Photo to be added</span>
+          </div>
+        )}
+      </div>
+      <figcaption>{caption}</figcaption>
+    </figure>
+  );
+}
+
 export default function StoryPage() {
+  const portraitSrc = findPhoto(portrait.base);
+  const arcPhotos = arc.map((p) => ({ ...p, src: findPhoto(p.base) }));
+
   return (
     <>
       <section className="section section-tight" style={{ background: "var(--paper-soft)" }}>
@@ -15,8 +85,8 @@ export default function StoryPage() {
           <h1>Connor &amp; Crissy</h1>
           <p className="lead prose">
             Every foundation begins with a reason. Ours has a name — two of them. This is the story
-            of a mother we lost to Huntington&rsquo;s disease, and a son we are walking beside with
-            everything we have.
+            of a mother we lost to Huntington&rsquo;s disease, and the bright, beloved son she left
+            behind.
           </p>
         </div>
       </section>
@@ -27,40 +97,53 @@ export default function StoryPage() {
             <div className="memorial">
               <p className="eyebrow">In loving memory</p>
               <h2 style={{ marginTop: 0 }}>Crissy</h2>
-              <div className="portrait" role="img" aria-label="A space held in memory of Crissy">
-                <span>
-                  Crissy
-                  <br />
-                  Connor&rsquo;s mother
-                  <br />
-                  Forever loved
-                </span>
+              <div className="photo-feature">
+                {portraitSrc ? (
+                  <img src={portraitSrc} alt={portrait.alt} />
+                ) : (
+                  <div className="ph">
+                    <span>A photo of Crissy</span>
+                  </div>
+                )}
               </div>
+              <p className="muted" style={{ marginTop: "12px", marginBottom: 0, fontStyle: "italic" }}>
+                {portrait.caption}
+              </p>
             </div>
             <div className="prose">
               <p>
-                Crissy was Connor&rsquo;s mother. She developed Huntington&rsquo;s disease as a young
-                woman and died far too soon — long before any child should have to say goodbye to a
-                parent.
+                This is Crissy — Connor&rsquo;s mom. Bright red hair, a wide smile, her whole life
+                ahead of her.
               </p>
               <p>
-                Huntington&rsquo;s is a cruel illness. It arrives slowly and takes a great deal: the
-                steadiness of a hand, the ease of a sentence, the small daily things that make
-                someone feel like themselves. But it does not erase who a person was. Crissy was a
-                daughter, a partner, and a mom. She is the reason this foundation exists, and she is
-                remembered with love every single day.
+                Huntington&rsquo;s disease doesn&rsquo;t usually arrive until middle age. For Crissy,
+                it came at <strong>twenty</strong>. The years that should have been her freest were
+                shadowed by an illness that slowly takes the steadiness of a hand, the ease of a
+                sentence, the small daily things that make someone feel like themselves. Through all
+                of it, she became a mother — and she loved Connor with everything she had.
               </p>
               <blockquote>
-                We could not change how her story ended. But we can change what happens next — for
-                Connor, and for other families who hear the word &ldquo;Huntington&rsquo;s&rdquo; for
-                the first time.
+                HD took so much from Crissy. It never took the fact that she was Connor&rsquo;s
+                mom.
               </blockquote>
               <p>
-                When someone you love dies of HD, you are handed two things at once: a grief that
-                doesn&rsquo;t leave, and a question that won&rsquo;t wait. Because Huntington&rsquo;s
-                is inherited, the people who mourned Crissy were also left to wonder what it means for
-                the children she left behind.
+                She passed away at <strong>twenty-nine</strong>, far too young, leaving a little boy
+                who carries her smile and her memory. We could not change how her story ended. But we
+                can change what happens next — for Connor, and for other families who hear the word
+                &ldquo;Huntington&rsquo;s&rdquo; for the first time.
               </p>
+            </div>
+          </div>
+
+          <div style={{ marginTop: "48px" }}>
+            <h3 style={{ marginBottom: "6px" }}>Her life, in moments</h3>
+            <p className="muted" style={{ marginBottom: "22px" }}>
+              From the young woman she was, to the day Connor arrived, to the years they shared.
+            </p>
+            <div className="photo-arc">
+              {arcPhotos.map((p) => (
+                <PhotoFrame key={p.base} src={p.src} caption={p.caption} alt={p.alt} />
+              ))}
             </div>
           </div>
         </div>
@@ -75,7 +158,7 @@ export default function StoryPage() {
           <div className="grid grid-2" style={{ alignItems: "start", gap: "44px" }}>
             <div className="prose">
               <p>
-                Connor is ten years old. He is, first and most importantly, a kid — with the same
+                Connor is ten years old now. He is, first and most importantly, a kid — with the same
                 curiosity, energy, and capacity for joy as any other ten-year-old. That is exactly
                 what his family is determined to protect.
               </p>
@@ -93,9 +176,9 @@ export default function StoryPage() {
                 season at a time.
               </p>
               <p>
-                What gives us real hope is timing. Connor is growing up in the first era when
-                therapies aimed at the <em>root</em> of Huntington&rsquo;s are actually being tested
-                in people. We don&rsquo;t pretend that&rsquo;s a cure. But it is a reason to face the
+                What gives us real hope is timing. Connor is growing up at a moment when therapies
+                aimed at the <em>root</em> of Huntington&rsquo;s are showing genuine promise in
+                trials. We don&rsquo;t pretend that&rsquo;s a cure. But it is a reason to face the
                 future with our heads up.
               </p>
             </div>

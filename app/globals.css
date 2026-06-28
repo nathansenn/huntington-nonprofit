@@ -452,6 +452,82 @@ button:focus-visible {
   font-size: 1.1rem;
 }
 
+/* ---------- Memorial photo arc ---------- */
+.photo-arc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+}
+.photo-frame {
+  margin: 0;
+}
+.photo-frame .frame-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--brand-soft), var(--accent-soft));
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-soft);
+}
+.photo-frame .frame-inner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-frame .ph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 16px;
+  color: var(--brand-deep);
+}
+.photo-frame .ph span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+.photo-frame figcaption {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.photo-feature {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow);
+  background: linear-gradient(160deg, var(--brand-soft), var(--accent-soft));
+  aspect-ratio: 4 / 5;
+  position: relative;
+}
+.photo-feature img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-feature .ph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  color: var(--brand-deep);
+  font-family: var(--serif);
+}
+
 /* ---------- Timeline ---------- */
 .timeline {
   position: relative;

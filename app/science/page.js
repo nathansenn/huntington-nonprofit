@@ -9,7 +9,7 @@ export const metadata = {
 
 const repeatRanges = [
   { range: "26 or fewer", label: "Typical", note: "Not associated with HD." },
-  { range: "27 – 35", label: "Intermediate", note: "No symptoms, but the repeat can expand in the next generation." },
+  { range: "27 – 35", label: "Intermediate", note: "Usually no symptoms, but the repeat can expand into the disease range in the next generation." },
   { range: "36 – 39", label: "Reduced penetrance", note: "May or may not cause symptoms, often later in life." },
   { range: "40 or more", label: "Full penetrance", note: "Associated with HD; longer repeats tend to mean earlier onset." },
 ];
@@ -71,7 +71,8 @@ export default function SciencePage() {
                 inheriting it. The repeat can also grow slightly from one generation to the next — a
                 phenomenon called anticipation — which is why some forms appear earlier in later
                 generations. A rare, more aggressive juvenile form (symptoms before age 20) is usually
-                linked to very long repeats, often more than 55.
+                linked to very long repeats, often more than 55 — though that is a tendency
+                rather than a rule, and it is most often inherited from an affected father.
               </p>
               <p>
                 Symptoms vary widely, but commonly include involuntary movements (chorea), changes in
@@ -128,11 +129,13 @@ export default function SciencePage() {
           <div className="callout info" style={{ marginTop: "28px" }}>
             <span className="callout-icon" aria-hidden="true">🧬</span>
             <p>
-              Large studies of HD families (the GeM-HD consortium) found that genes controlling
-              DNA &ldquo;mismatch repair&rdquo; — including <strong>MSH3</strong> and{" "}
-              <strong>FAN1</strong> — strongly influence when symptoms begin. That&rsquo;s strong
-              evidence that the <em>speed of expansion</em>, not just the inherited length, shapes the
-              disease — and that it&rsquo;s a target worth pursuing.
+              Large studies of HD families (the GeM-HD consortium) found that DNA-repair genes
+              strongly influence when symptoms begin — independent of the inherited repeat length.
+              One, the mismatch-repair gene <strong>MSH3</strong>, speeds the repeat&rsquo;s growth
+              and tends to bring symptoms earlier; another, <strong>FAN1</strong>, does the opposite,
+              slowing that growth and delaying onset. That&rsquo;s strong evidence that the{" "}
+              <em>speed of expansion</em> — not just the inherited length — shapes the disease, and
+              points to it as a target worth pursuing.
             </p>
           </div>
         </div>
@@ -144,8 +147,9 @@ export default function SciencePage() {
             <h2>Therapies in development</h2>
             <p className="lead">
               Several approaches are being tested. None is an approved cure, and most are still in
-              trials — but for the first time, treatments aimed at the biology of HD are reaching real
-              patients.
+              trials — but a real pipeline of treatments aimed at the biology of HD, not just its
+              symptoms, is now being studied in patients, with several showing encouraging early
+              results.
             </p>
           </div>
           <div className="grid grid-2">
@@ -187,18 +191,19 @@ export default function SciencePage() {
               <span className="callout-icon" aria-hidden="true">✅</span>
               <p>
                 <strong>Real and encouraging.</strong> AMT-130&rsquo;s Phase I/II showed a 75% slowing
-                of clinical decline at 36 months (p=0.003) versus a matched comparison group, and its
-                maker plans to file for U.S. accelerated approval in late 2026. Genuine, peer-reviewed
-                progress on the underlying disease.
+                of clinical decline at 36 months (p=0.003) versus a matched external comparison group,
+                and its maker has announced plans to file for U.S. accelerated approval around late
+                2026. Genuine progress on the underlying disease — though still from a small,
+                early-stage study.
               </p>
             </div>
             <div className="callout note">
               <span className="callout-icon" aria-hidden="true">⚠️</span>
               <p>
-                <strong>Promising but early.</strong> Reducing the MSH3 protein by ~83% halted further
-                CAG expansion — but only in HD neurons grown in a lab dish, not in people. No MSH3
-                therapy has yet entered human trials. &ldquo;Halt&rdquo; means stop further growth, not
-                reverse it.
+                <strong>Promising but early.</strong> A lab model predicted that reducing the MSH3
+                protein by ~83% would halt further CAG expansion — but that was in HD neurons grown in
+                a dish, not in people, and no MSH3 therapy has yet entered human trials. &ldquo;Halt&rdquo;
+                means stop further growth, not reverse it.
               </p>
             </div>
             <div className="callout info">

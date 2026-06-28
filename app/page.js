@@ -21,7 +21,7 @@ const facts = [
   {
     stat: "1993",
     label:
-      "The year the HD gene was found. Three decades later, the first disease-modifying therapies are finally in trials.",
+      "The year the HD gene was found. Three decades later, therapies that target the disease itself — not just its symptoms — are showing promise in trials.",
   },
 ];
 
@@ -39,7 +39,7 @@ const pillars = [
   {
     icon: "🌅",
     title: "Hold on to honest hope",
-    body: "For the first time, therapies aimed at the root of HD are being tested in people. Hope grounded in evidence is the kind that lasts.",
+    body: "Therapies aimed at the root of HD — not just its symptoms — are now in clinical trials, some with encouraging early results. Hope grounded in evidence is the kind that lasts.",
   },
 ];
 

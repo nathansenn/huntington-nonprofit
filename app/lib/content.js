@@ -1,6 +1,7 @@
 // Static, sourced content for the site. Every figure here is grounded in the
-// research briefing compiled from primary sources (see /science "Sources").
-// Status language is deliberately careful: nothing here is an approved cure.
+// research briefing and an independent adversarial fact-check, both compiled
+// from primary sources (see /science "Sources"). Status language is
+// deliberately careful: nothing here is an approved cure.
 
 export const therapeuticPrograms = [
   {
@@ -10,7 +11,7 @@ export const therapeuticPrograms = [
     status: "clinic",
     statusLabel: "Phase I/II — not approved",
     detail:
-      "The furthest-advanced disease-modifying candidate. In its Phase I/II study, the high dose showed a 75% slowing of decline on the cUHDRS clinical scale at 36 months (p=0.003) versus a matched external comparison group. These results are encouraging but come from a small study (29 participants) without a randomized placebo arm. uniQure plans to file for U.S. accelerated approval in Q3 2026, with a UK submission in parallel; a confirmatory trial will still be required.",
+      "The furthest-advanced disease-modifying candidate. In its Phase I/II program, the high dose showed a 75% slowing of decline on the cUHDRS clinical scale at 36 months (p=0.003), compared against a matched external group drawn from natural-history data. That headline result rests on the 12 high-dose participants who had reached 36 months — a small number, and measured against external controls rather than the trial's own small randomized sham group. uniQure has announced plans to file for U.S. accelerated approval around Q3 2026, with a UK submission in parallel. A confirmatory trial is still required, and the therapy is not yet approved.",
   },
   {
     name: "Votoplam (PTC518)",
@@ -19,7 +20,7 @@ export const therapeuticPrograms = [
     status: "trial",
     statusLabel: "Phase 3 enrolling",
     detail:
-      "An oral huntingtin-lowering drug. A 24-month interim analysis reported roughly 52% slowing on the cUHDRS scale versus a matched natural-history comparison. A large Phase 3 trial (INVEST-HD) is now enrolling. Interim, externally-controlled results like these need confirmation in the randomized trial.",
+      "An oral huntingtin-lowering drug. In a 24-month interim look at an open-label extension, the higher (10 mg) dose showed roughly 52% slowing on the cUHDRS scale in Stage 2 patients versus a matched natural-history comparison — the lower dose showed about 28%. These are early interim signals, reported without formal statistical testing and compared to natural history rather than a placebo group. A large Phase 3 trial (INVEST-HD), now run by Novartis, is enrolling; that randomized study is what would confirm the effect.",
   },
   {
     name: "WVE-003",
@@ -28,7 +29,7 @@ export const therapeuticPrograms = [
     status: "trial",
     statusLabel: "Early clinical",
     detail:
-      "Designed to silence only the disease-causing copy of the gene. An early trial showed meaningful lowering of mutant huntingtin with the healthy protein preserved, and a signal of slowed loss of brain tissue. It is advancing toward a larger study.",
+      "Designed to silence only the disease-causing copy of the gene — for the roughly 40% of patients who carry the specific genetic marker it targets. In a small early trial it lowered mutant huntingtin by about 46% while preserving the healthy protein, and was generally well tolerated. The degree of lowering correlated with slower shrinkage of a key brain region, but the study was not built to prove that effect. A larger study is planned, pending a development partner.",
   },
   {
     name: "MSH3 inhibitors (e.g. LQT-23)",
@@ -37,7 +38,7 @@ export const therapeuticPrograms = [
     status: "preclin",
     statusLabel: "Preclinical",
     detail:
-      "A newer strategy that targets the engine of the disease — the ongoing growth of the repeat inside neurons. In patient-derived neurons grown in a lab, reducing MSH3 by ~83% halted further expansion. No MSH3 therapy has yet been tested in people; the first candidates are expected to enter human trials over the coming years.",
+      "A newer strategy that targets the engine of the disease — the ongoing growth of the repeat inside neurons. In patient-derived neurons grown in a lab, a dose-response model predicted that reducing MSH3 by about 83% would halt further expansion (and roughly 41% would halve it). No MSH3 therapy has yet been tested in people; the first candidates are expected to enter human trials over the coming years. (The only repeat-expansion drug in human trials so far targets a related gene, PMS1, not MSH3.)",
   },
   {
     name: "Tominersen",
@@ -46,7 +47,7 @@ export const therapeuticPrograms = [
     status: "trial",
     statusLabel: "Phase 2 ongoing",
     detail:
-      "An earlier Phase 3 trial was halted in 2021, but a redesigned study (GENERATION HD2) using a lower dose in earlier-stage patients is ongoing and expected to read out around 2026. It is a key test of whether dose and timing make the difference.",
+      "An earlier Phase 3 trial was halted in 2021 after an interim review found no benefit, but a redesigned Phase 2 study (GENERATION HD2) in earlier-stage patients is ongoing; in 2025 it was streamlined to its higher dose, with results expected around 2026. It is a key test of whether dose and timing make the difference.",
   },
   {
     name: "Symptomatic medicines",
@@ -65,14 +66,14 @@ export const resources = [
     region: "United States",
     url: "https://hdsa.org/",
     description:
-      "The largest U.S. HD nonprofit, founded in 1967. Runs a national helpline, 50+ Centers of Excellence, local support groups, and a social-worker network for families.",
+      "The largest U.S. HD nonprofit, founded in 1967 by Marjorie Guthrie. Runs a national helpline, a network of Centers of Excellence, local support groups, and social-worker support for families.",
   },
   {
     name: "HD Youth Organization (HDYO)",
     region: "International · for young people",
     url: "https://www.hdyo.org/",
     description:
-      "Dedicated entirely to children and young adults affected by HD. Age-appropriate explanations, peer community, camps, and one-to-one support — a wonderful first stop for kids like Connor.",
+      "Dedicated entirely to children and young adults affected by HD. Age-appropriate explanations, peer community, and one-to-one support — a wonderful first stop for kids like Connor.",
   },
   {
     name: "Huntington Society of Canada",
@@ -107,27 +108,27 @@ export const resources = [
 export const sources = [
   {
     text:
-      "Huntington Disease — GeneReviews (NCBI Bookshelf), updated Feb 2026. Genetics, repeat ranges, inheritance, juvenile HD.",
+      "Huntington Disease — GeneReviews (NCBI Bookshelf), updated 2026. Genetics, repeat ranges, inheritance, juvenile HD.",
     url: "https://www.ncbi.nlm.nih.gov/books/NBK1305/",
   },
   {
     text:
-      "GeM-HD Consortium. “CAG repeat, not polyglutamine length, determines timing of HD onset.” Cell, 2019. Mismatch-repair modifier genes.",
+      "GeM-HD Consortium. Genetic modifiers of HD onset (Cell 2019; Nature Genetics 2025). MSH3 hastens onset; FAN1 is protective.",
     url: "https://pubmed.ncbi.nlm.nih.gov/31398342/",
   },
   {
     text:
-      "Handsaker et al. “Long somatic DNA-repeat expansion drives neurodegeneration in HD.” Cell, 2025. Single-cell evidence; ~150-CAG threshold (single study).",
+      "Handsaker et al. “Long somatic DNA-repeat expansion drives neurodegeneration in HD.” Cell, Jan 2025. Single-cell evidence; ~150-CAG threshold in striatal neurons (single study).",
     url: "https://www.cell.com/cell/fulltext/S0092-8674(24)01379-5",
   },
   {
     text:
-      "Bunting et al. MSH3 suppression reduces CAG expansion in HD patient-derived neurons. Science Translational Medicine, 2025 (UCL summary).",
-    url: "https://www.ucl.ac.uk/brain-sciences/news/2025/feb/reducing-dna-repair-protein-levels-targets-root-cause-huntingtons",
+      "Bunting et al. “ASO-mediated MSH3 suppression reduces CAG expansion in HD iPSC-derived striatal neurons.” Science Translational Medicine, 2025.",
+    url: "https://www.science.org/doi/10.1126/scitranslmed.adn4600",
   },
   {
     text:
-      "uniQure. Positive topline Phase I/II results for AMT-130, Sept 24, 2025 (cUHDRS 75% slowing, p=0.003).",
+      "uniQure. Positive topline Phase I/II results for AMT-130, Sept 24, 2025 (cUHDRS 75% slowing, p=0.003 vs external control).",
     url: "https://www.globenewswire.com/news-release/2025/09/24/3155348/0/en/uniQure-Announces-Positive-Topline-Results-from-Pivotal-Phase-I-II-Study-of-AMT-130-in-Patients-with-Huntington-s-Disease.html",
   },
   {
